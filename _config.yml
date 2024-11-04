@@ -15,7 +15,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Hi! I'm Brennan Benson."
+title: "Brennan Benson"
 email: 'brennankbenson@gmail.com'
 description: "I'm a senior at Northwestern University majoring in computer science and minoring in data science & engineering.\n
     While my passion for computer science originally came from moving fast and breaking things in the startup world, my software engineering internships at Atlas Reality, a small mobile game startup, and the Bank of New York, a large financial institution, have given me the technical knowledge to develop reliable, industry-standard software.\n
