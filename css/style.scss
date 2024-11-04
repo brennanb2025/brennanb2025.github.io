@@ -122,7 +122,7 @@ button.btn, input.btn {
 }
 
 .hero-content {
-  width: 60%;
+  width: 78%;
   margin: 0 auto;
   display: table;
   @include bp-medium {
@@ -144,7 +144,7 @@ button.btn, input.btn {
     margin: 0 auto;
     display: table;
     i {
-      padding-right: 0.5em;
+      padding-right: 0.3em;
     }
   }
 }
@@ -206,7 +206,7 @@ button.btn, input.btn {
 	3.0 Posts
 --------------------------------------------------------------*/
 #portfolio .container {
-  margin-top: 10em;
+  margin-top: 5em;
   @include bp-xsmall {
     margin-top: 2em;
   }
@@ -216,6 +216,10 @@ button.btn, input.btn {
       margin: 2em 0;
     }
   }
+}
+
+.project-container {
+  margin: 10em 0 0 0;
 }
 
 .section-title {
@@ -255,6 +259,12 @@ button.btn, input.btn {
   @include bp-small {
     margin-bottom: 2em;
   }
+  .img-left {
+    transform: translateX(-5%);
+  }
+  .img-right {
+    transform: translateX(5%);
+  }
   img.img-responsive {
     @include bp-xsmall {
       display: none;
@@ -266,6 +276,7 @@ button.btn, input.btn {
   .content {
     margin-top: 5em;
     margin-left: 5em;
+    margin-right: 0em;
     @include bp-xsmall {
       margin-left: 0;
     }
@@ -283,7 +294,7 @@ button.btn, input.btn {
       }
     }
     .excerpt {
-      width: 80%;
+      width: 90%;
       @include bp-xsmall {
         width: 100%;
       }
@@ -340,6 +351,31 @@ button.btn, input.btn {
     @include bp-xsmall {
       float: none;
     }
+  }
+}
+
+/*--------------------------------------------------------------
+	4.5 Header
+--------------------------------------------------------------*/
+
+.navbar-right {
+  font-size: 1.6em;
+  padding-right: 2.4em; 
+}
+.navbar-brand {
+  font-size: 1.6em;
+  padding-left: 2.4em;
+  padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-right li {
+  padding: 0 0.5em;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 

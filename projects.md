@@ -1,5 +1,6 @@
 ---
-layout: page
-title: Projects
-permalink: /projects/
+layout: projects
+title: "Projects"
+pagination:
+  enabled: true
 ---

@@ -35,6 +35,7 @@ plugins:
 # The values here represent the defaults if nothing is set
 paginate: 10
 paginate_path: "/page:num/"
+paginate_path: "/projects/page:num/"
 
 pagination:
   
