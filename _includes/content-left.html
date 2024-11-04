@@ -7,7 +7,11 @@
     </div>
 
     <div class="col-xs-12 col-md-6 img-left">
-      {% include featured-image.html %}
+      {% if post.project_embed %}
+        {% include processing-game-content.html %}
+      {% else %}
+        {% include featured-image.html %}
+      {% endif %}
     </div>
 
   </div>

@@ -241,7 +241,7 @@ button.btn, input.btn {
 }
 
 .section-subtitle {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   @include bp-xsmall {
     width: 100%;
@@ -326,6 +326,17 @@ button.btn, input.btn {
 .post-row {
     align-items: center;
     display: flex;
+}
+
+
+
+.processing-demo {
+  .processingEmbed {
+    max-width: 500px;
+    max-height: 500px;
+    border: 2px;
+    border-style: solid;
+  }
 }
 
 /*--------------------------------------------------------------
