@@ -1,6 +1,6 @@
 ---
 layout: inner
-position: right
+position: left
 title: 'Music Matchmaker'
 date: 2024-11-03 16:00:00
 categories: development

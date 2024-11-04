@@ -119,6 +119,24 @@ button.btn, input.btn {
   @include bp-small {
     margin: 5em 0 5em 0;
   }
+  .hero-header {
+    display: flex;
+    align-items: center;     /* Vertically centers the content */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 3em;                /* Adds space between the image and the title */
+    .profile-picture {
+      width: 200px;          /* Set the desired width */
+      height: 200px;         /* Set the same value for height to make it a circle */
+      border-radius: 50%;    /* This makes the image circular */
+      display: block;        /* Centers the image */
+      margin: 0;      
+      object-fit: cover;     /* Ensures the image covers the area without distortion */
+    }
+    .hero-title {
+      font-size: 2em; /* Adjusts title size */
+      margin: 0;
+    }
+  }
 }
 
 .hero-content {
@@ -335,6 +353,7 @@ button.btn, input.btn {
     max-width: 500px;
     max-height: 500px;
     border: 2px;
+    border-radius: 8px;
     border-style: solid;
   }
 }

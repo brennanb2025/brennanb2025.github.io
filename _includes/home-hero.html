@@ -8,9 +8,13 @@
 
         <div class="hero-content">
 
-          {% if site.title != '' %}
-          <h1 class="text-center">{{site.title}}</h1>
-          {% endif %}
+          <div class="hero-header">
+            <img src="img/Brennan.jpeg" alt="A picture of me!" class="profile-picture" />
+            
+            {% if site.title != '' %}
+            <h1 class="hero-title">{{site.title}}</h1>
+            {% endif %}
+        </div>
 
           {% if site.description != '' or site.enable_contact == true %}
           <p class="text-center">
