@@ -17,7 +17,7 @@
 # in the templates via {{ site.myvariable }}.
 title: "Brennan Benson"
 email: 'brennankbenson@gmail.com'
-description: "I'm a senior at Northwestern University majoring in computer science and minoring in data science & engineering.\n
+description: "Thanks for visiting my site! I'm a senior at Northwestern University majoring in computer science and minoring in data science & engineering.\n
     While my passion for computer science originally came from moving fast and breaking things in the startup world, my software engineering internships at Atlas Reality, a small mobile game startup, and the Bank of New York, a large financial institution, have given me the technical knowledge to develop reliable, industry-standard software.\n
     I'm excited to bring my unique perspective to my next software development role."
 baseurl: "" # the subpath of your site, e.g. /blog

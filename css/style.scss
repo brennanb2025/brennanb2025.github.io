@@ -112,7 +112,7 @@ button.btn, input.btn {
 	2.0 Home Hero
 --------------------------------------------------------------*/
 .hero-container {
-  margin: 10em 0 9em 0;
+  margin: 9em 0 5em 0;
   @include bp-xsmall {
     margin: 5em 0 5em 0;
   }
@@ -125,8 +125,8 @@ button.btn, input.btn {
     justify-content: center; /* Centers the content horizontally */
     gap: 3em;                /* Adds space between the image and the title */
     .profile-picture {
-      width: 200px;          /* Set the desired width */
-      height: 200px;         /* Set the same value for height to make it a circle */
+      width: 270px;          /* Set the desired width */
+      height: 270px;         /* Set the same value for height to make it a circle */
       border-radius: 50%;    /* This makes the image circular */
       display: block;        /* Centers the image */
       margin: 0;      
