@@ -26,9 +26,13 @@ $secondary: #FF7B7B;
 	1.0 Defaults
 --------------------------------------------------------------*/
 
-@media (min-width: 1300px) {
-  .container {
-    width: 1300px;
+@media (max-width: 768px) {
+  .main.container {
+    max-width: 100%; /* Ensure content doesn't exceed the viewport width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0 auto; /* Center-align the container */
+    padding: 0 15px; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
 }
 
@@ -112,60 +116,112 @@ button.btn, input.btn {
 	2.0 Home Hero
 --------------------------------------------------------------*/
 .hero-container {
+  width: 100%;
   margin: 9em 0 5em 0;
+
   @include bp-xsmall {
     margin: 5em 0 5em 0;
   }
+
   @include bp-small {
     margin: 5em 0 5em 0;
   }
+
   .hero-header {
     display: flex;
-    align-items: center;     /* Vertically centers the content */
-    justify-content: center; /* Centers the content horizontally */
-    gap: 3em;                /* Adds space between the image and the title */
+    align-items: center;     
+    justify-content: center; 
+    gap: 5%;                
+
     .profile-picture {
-      width: 270px;          /* Set the desired width */
-      height: 270px;         /* Set the same value for height to make it a circle */
-      border-radius: 50%;    /* This makes the image circular */
-      display: block;        /* Centers the image */
-      margin: 0;      
-      object-fit: cover;     /* Ensures the image covers the area without distortion */
+      width: 30%;          
+      height: 30%;         
+      border-radius: 50%;    
+      display: block;        
+      margin-left: 5%;
+      object-fit: cover;     
     }
+
     h1 {
-      font-size: 45px; /* Adjusts title size */
-      margin: 0;
+      font-size: 45px; 
+      margin-right: 5%;
     }
   }
 }
 
 .hero-content {
   width: 78%;
+  max-width: 78%;
   margin: 0 auto;
   display: table;
+
   @include bp-medium {
     width: 100%;
   }
+
   @include bp-small {
     width: 100%;
   }
+
   @include bp-xsmall {
     width: 100%;
   }
+
   h1 {
     font-size: 48px;
   }
+
   p {
-    margin: 2em 0 4em 0;
+    margin: 2em;
   }
+
   .hero-buttons {
-    margin: 0 auto;
-    display: table;
-    i {
-      padding-right: 0.3em;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 5%; 
+    margin: 0 auto; 
+    text-align: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 1em; /* Reduce gap between buttons */
     }
   }
 }
+
+
+/* smaller screen size */
+@media (max-width: 768px) {
+  .hero-container {
+    .hero-header {
+      width: 100%;
+      margin: 2em 0 2em 0;
+
+      .profile-picture {
+        width: 60%; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image is treated as a block element */
+        margin: 0 auto; /* Center the image */
+      }
+
+      h1 {
+        font-size: 30px; /* Uncomment to reduce font size for better fit */
+        text-align: center;
+      }
+    }
+
+    .hero-content {
+      width: 100%; /* Give more space for smaller screens */
+      p {
+        margin: 1em 0 3em 0; /* Reduce padding around paragraph */
+        font-size: 18px; /* Smaller font for mobile readability */
+        text-align: center;
+      }
+    }
+  }
+}
+
 
 /*--------------------------------------------------------------
 	2.1 Contact
@@ -346,12 +402,10 @@ button.btn, input.btn {
     display: flex;
 }
 
-
-
 .processing-demo {
   .processingEmbed {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 40%;
+    max-height: 40%;
     border: 2px;
     border-radius: 8px;
     border-style: solid;
@@ -402,10 +456,25 @@ button.btn, input.btn {
 .navbar-right li {
   padding: 0 0.5em;
 }
-@media (min-width: 768px) {
+@media (min-width: 40%) {
   .navbar-nav > li > a {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+}
+
+/* Container styling */
+.media-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* Space between image/video and description */
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .media-container {
+      flex-direction: column; /* Stack video/image on top of description */
   }
 }
 
