@@ -339,14 +339,14 @@ button.btn, input.btn {
   .img-right {
     transform: translateX(5%);
   }
-  img.img-responsive {
-    @include bp-xsmall {
-      display: none;
-    }
-    @include bp-small {
-      display: none;
-    }
-  }
+  // img.img-responsive {
+  //   @include bp-xsmall {
+  //     display: none;
+  //   }
+  //   @include bp-small {
+  //     display: none;
+  //   }
+  // }
   .content {
     margin-top: 5em;
     margin-left: 5em;
@@ -398,17 +398,96 @@ button.btn, input.btn {
 
 // vertically center content of post rows
 .post-row {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
+}
+
+.video-responsive .video-frame {
+  position: relative;
+  width: 100%; /* Take full width of the parent */
+  aspect-ratio: 16 / 9; /* Maintain a 16:9 ratio */
+}
+
+// .video-responsive iframe {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%; /* Scale to fill the container */
+//   height: 100%;
+//   border: none;
+// }
+
+video {
+  width: 100%; /* Full width of the parent container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.img-responsive {
+  max-width: 100%; /* Scale image to fit within container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .processing-demo {
+  display: flex;            /* Enables flexbox */
+  justify-content: center;  /* Horizontally center the child */
+  align-items: center;      /* Vertically center the child */
   .processingEmbed {
-    max-width: 40%;
-    max-height: 40%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border: 2px;
     border-radius: 8px;
     border-style: solid;
+  }
+}
+
+/* General styles for the layout */
+// .post-row {
+//   display: flex; /* Ensures the layout works in a row for larger screens */
+//   flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+// }
+
+// .img-left {
+//   order: 1; /* Default position: video comes after the text */
+// }
+
+// .img-right {
+//   order: 1; /* Default position: video comes after the text */
+// }
+
+// .col-md-6 {
+//   width: 50%; /* Default width for medium and larger screens */
+// }
+@media (max-width: 768px) {
+
+  .post-row {
+    flex-direction: column; /* Stacks the elements vertically */
+  }
+
+  .content-wrap .img-left {
+    order: -1; /* Moves the video above the text */
+    transform: translateX(0%); // undo the translation
+  }
+  .content-wrap .img-right {
+    order: -1; /* Moves the video above the text */
+    transform: translateX(0%); // undo the translation
+  }
+
+  .col-md-6 {
+    width: 100%; /* Makes each section full-width on smaller screens */
+  }
+
+  .processing-demo {
+    .processingEmbed {
+      width: 80%;
+      height: 80%;
+      max-width: 80%;
+      max-height: 80%;
+      border: 2px;
+      border-radius: 8px;
+      border-style: solid;
+    }
   }
 }
 
@@ -469,12 +548,17 @@ button.btn, input.btn {
   flex-direction: row;
   gap: 1rem; /* Space between image/video and description */
   align-items: center;
+  .media {
+    width: 100%;
+  }
 }
+
+
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .media-container {
-      flex-direction: column; /* Stack video/image on top of description */
+    flex-direction: column; /* Stack video/image on top of description */
   }
 }
 

@@ -2,10 +2,10 @@
   <div class="media">
     {% if post.youtube_video %}
       <div class="video-responsive">
-        <iframe width="560" height="315" src="{{post.youtube_video}}" title="{{ post.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video-frame" src="{{post.youtube_video}}" title="{{ post.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     {% elsif post.video %}
-      <video width="560" height="315" controls>
+      <video controls>
         <source src="{{ post.video }}" type="video/mp4">
         Your browser does not support the video tag.
       </video>

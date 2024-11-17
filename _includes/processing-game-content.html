@@ -1,5 +1,5 @@
-<div class="processing-demo">
-    <script type="text/javascript" src="/processingGame/processing_try.js"></script></script>
+<div class="processing-demo" id="game-container">
+    <script type="text/javascript" src="/processingGame/processing_try.js"></script>
 
     <canvas id="shooterGameEmbed" class="processingEmbed" 
             data-processing-sources="/processingGame/shooterGame.pde 
@@ -23,3 +23,13 @@
                                         /processingGame/SpinningEnemyTurret.pde">
     </canvas>
 </div>
+
+<script>
+    if (window.innerWidth <= 768) {
+      const gameContainer = document.getElementById('game-container');
+      gameContainer.innerHTML = "<p>This game requires a keyboard and cannot be played on mobile devices.</p>";
+      gameContainer.style.textAlign = "center";
+      gameContainer.style.padding = "20px";
+      gameContainer.style.display = "block"; // Ensure message displays even if CSS hides the container
+    }
+</script>
