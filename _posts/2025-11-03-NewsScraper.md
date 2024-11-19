@@ -1,10 +1,10 @@
 ---
 layout: inner
-position: left
+position: right
 title: 'News Polarity Analyzer'
 date: 2024-11-02 18:00:00
 categories: development
-tags: Python Flask Selenium NLTK
+tags: Python|Flask|Selenium|NLTK|Plotly|Data__Analysis
 youtube_video: 'https://www.youtube.com/embed/0ZVx7gjKVio'
 project_link: ''
 github_link: 'https://github.com/brennanb2025/News-scraper'

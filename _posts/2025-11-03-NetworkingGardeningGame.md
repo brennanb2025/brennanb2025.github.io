@@ -4,7 +4,7 @@ position: right
 title: 'Networking Gardening Game'
 date: 2024-11-03 19:00:00
 categories: development
-tags: Java SpringBoot Mockito React
+tags: Java|Spring__Boot|SQL|AWS__(RDS)|RESTful__API|JUnit|Mockito|React|JavaScript
 featured_image: '/img/posts/NetworkGardening.jpg'
 project_link: ''
 github_link: 'https://github.com/brennanb2025/NetworkingGardeningGameAPI'
